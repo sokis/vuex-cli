@@ -51,8 +51,7 @@ export default class Blueprint {
 			path.resolve(__dirname, '..', '..', 'blueprints')
 		];
 	}
-	// find blueprint given a path or return error
-	// look inside current project first and then redux-cli defaults
+	
 	static lookup(name, options = {}) {
 		const lookupPaths = generateLookupPaths(options.paths);
 

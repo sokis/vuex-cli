@@ -8,10 +8,6 @@ import CreateAndStepIntoDirectory from '../tasks/create-and-step-into-directory'
 import GitPull from '../tasks/git-pull';
 import ProjectSettings from '../models/project-settings';
 
-// eventually allow users to create new projects based on a flag
-// ie. they can create a new react-redux-starter-kit or a new
-// universal react starter kit, etc.
-
 class New extends SubCommand {
   constructor() {
     super();
@@ -37,32 +33,31 @@ class New extends SubCommand {
 
   confirmGit() {
     if (!which('git')) {
-      this.ui.writeError('运行该脚本需要你安装Git.');
-      this.ui.writeInfo('如果你有安装Homebrew，请试试运行: brew install git');
+      this.logger.writeError('运行该脚本需要你安装Git.');
+      this.logger.writeInfo('如果你有安装Homebrew，请试试运行: brew install git');
       process.exit(1);
     }
   }
 
   // Should maybe prompt user for permission to do this since it's dangerous.
   resetGitHistory() {
-    this.ui.writeInfo('移除 Staret Kit项目的 .git 文件夹');
+    this.logger.writeInfo('移除 Staret Kit项目的 .git 文件夹');
     rm('-rf', '.git');
     exec('git init && git add -A && git commit -m"Initial commit"', {
       silent: true
     });
-    this.ui.writeCreate('创建新的 .git 到的项目中');
-    this.ui.writeInfo('Congrats! New Redux app ready to go.  CLI generators configured and ready to go');
+    this.logger.writeCreate('创建新的 .git 到的项目中');
+    this.logger.writeInfo('恭喜！新的vuex项目已经创建成功。接下来你可以配置CLI并继续使用它');
   }
 
-  // All settings for react-redux-starter-kit live in this template so when
-  // new projects get created users can immediately start using the CLI
+  // 创建.vuexrc到新的vuex项目中。
   createProjectSettings() {
-    this.ui.writeInfo('创建默认的.reduxrc文件到项目中');
-    const reduxStarterKitTemplate = '../../templates/.starterrc';
-    const settings = new ProjectSettings(reduxStarterKitTemplate);
+    this.logger.writeInfo('创建默认的.vuexrc文件到项目中');
+    const vuexStarterKitTemplate = '../../templates/.starterrc';
+    const settings = new ProjectSettings(vuexStarterKitTemplate);
     settings.save();
 
-    this.ui.writeCreate('保存.reduxrc设置.');
+    this.logger.writeCreate('保存.vuexrc设置.');
   }
 }
 
