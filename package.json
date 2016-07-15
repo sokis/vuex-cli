@@ -1,6 +1,6 @@
 {
   "name": "vuex-cli",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "description": "快速搭建 vuex/vuejs 应用脚手架。",
   "main": "bin/vuex.js",
   "engine": {
@@ -8,6 +8,9 @@
   },
   "scripts": {
     "test": "npm run lint",
+    "start": "npm run build:watch",
+    "build": "./node_modules/.bin/babel src -d lib",
+    "build:watch": "./node_modules/.bin/babel src --watch -d lib",
     "lint": "./node_modules/.bin/eslint ./src ./test ./blueprints",
     "clean": "rimraf lib",
     "publish:patch": "npm test && npm run clean && npm run build && npm version patch && npm publish",

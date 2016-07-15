@@ -15,8 +15,8 @@ program
 // fake an alias for generate since commander doesn't support
 // aliases for sub-commands.
 program
-  // .command('generate', '')
-  .command('g', '基于Blueprints模板创建结构');
+  .command('generate', '基于Blueprints模板创建结构')
+  .command('g', 'generate 的别名');
 
 program.on('--help', () => {
   console.log('  Examples:');
