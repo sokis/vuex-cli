@@ -7,7 +7,7 @@
     "node": ">=6.3.0"
   },
   "scripts": {
-    "test": "npm run lint",
+    "test": "env NODE_PATH=$NODE_PATH:$PWD/src ./node_modules/.bin/babel-node ./node_modules/.bin/_mocha --compilers js:babel-register --opts ./.mocharc ",
     "start": "npm run build:watch",
     "build": "./node_modules/.bin/babel src -d lib",
     "build:watch": "./node_modules/.bin/babel src --watch -d lib",
