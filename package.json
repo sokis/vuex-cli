@@ -4,7 +4,7 @@
   "description": "快速搭建 vuex/vuejs 应用脚手架。",
   "main": "bin/vuex.js",
   "engine": {
-    "node": ">=6.3.0"
+    "node": ">=6.2.0"
   },
   "scripts": {
     "test": "env NODE_PATH=$NODE_PATH:$PWD/src ./node_modules/.bin/babel-node ./node_modules/.bin/_mocha --compilers js:babel-register --opts ./.mocharc ",

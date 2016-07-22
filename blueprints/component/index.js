@@ -1,8 +1,8 @@
-import { normalizeCasing } from '../../src/util/text-helper';
+import { normalizeCasing } from '../../lib/util/text-helper';
 
 module.exports = {
   description() {
-    return 'Generates a dumb (aka Pure) component';
+    return '创建组件';
   },
   fileMapTokens() {
     return {
