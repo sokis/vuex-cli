@@ -24,7 +24,7 @@ vuex g component SimpleButton
 ## 备注
 本项目基于[`redux-cli`](https://github.com/SpencerCDixon/redux-cli)创建。该项目借鉴了 `ember-cli`的 `blueprints`来作为脚手架工具。
 
-初始化的项目基于[`Vue Vuex Starter Kit`](https://github.com/sokis/vue-vuex-starter-kit.git')构建
+初始化的项目基于[`Vue Vuex Starter Kit`](https://github.com/sokis/vue-vuex-starter-kit)构建
 
 
 
