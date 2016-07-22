@@ -1,4 +1,4 @@
-import { normalizeCasing } from '../../lib/util/text-helper';
+var utils = require('../../lib/util/text-helper');
 
 module.exports = {
   description() {
@@ -6,7 +6,7 @@ module.exports = {
   },
   fileMapTokens() {
     return {
-      __style__: (options) => normalizeCasing(options.entity.name,'dashes')
+      __style__: (options) => utils.normalizeCasing(options.entity.name, 'dashes')
     };
   }
 };
