@@ -1,6 +1,6 @@
 {
   "name": "vuex-cli",
-  "version": "0.4.0",
+  "version": "2.0.0-beta.4",
   "description": "快速搭建 vuex/vuejs 应用脚手架。",
   "main": "bin/vuex.js",
   "engine": {
@@ -14,14 +14,17 @@
     "lint": "./node_modules/.bin/eslint ./src ./test ./blueprints",
     "clean": "rimraf lib",
     "publish:patch": "npm test && npm run clean && npm run build && npm version patch && npm publish",
-    "publish:minor": "npm test && npm run clean && npm run build && npm version minor && npm publish"
+    "publish:minor": "npm test && npm run clean && npm run build && npm version minor && npm publish",
+    "release": "bash build/release.sh"
   },
   "bin": {
     "vuex": "bin/vuex.js",
     "vuex-init": "bin/vuex-init.js",
     "vuex-generate": "bin/vuex-generate.js",
     "vuex-g": "bin/vuex-g.js",
-    "vuex-new": "bin/vuex-new.js"
+    "vuex-new": "bin/vuex-new.js",
+    "vuex-server": "bin/vuex-server.js",
+    "vuex-compile": "bin/vuex-compile.js"
   },
   "repository": {
     "type": "git",
@@ -54,6 +57,7 @@
     "fs-extra": "^0.26.5",
     "humps": "^1.0.0",
     "jsonfile": "^2.2.3",
+    "koa": "^1.2.1",
     "lodash": "^4.5.1",
     "log-update": "^1.0.2",
     "minimist": "^1.2.0",
@@ -61,6 +65,7 @@
     "shelljs": "^0.6.0",
     "temp": "^0.8.3",
     "through": "^2.3.8",
+    "vuex-cli-webpack": "^0.1.5",
     "walk-sync": "^0.2.6"
   },
   "devDependencies": {
