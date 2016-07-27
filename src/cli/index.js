@@ -18,21 +18,12 @@ program
   .command('generate', '基于Blueprints模板创建结构')
   .command('g', 'generate 的别名');
 
-program  
-  .command('server', '开启开发服务器');
-
-program  
-  .command('compile', '编译代码');
-
 program.on('--help', () => {
   console.log('  Examples:');
   console.log('');
   console.log('    $ vuex init --help');
   console.log('    $ vuex new my-vuex-project');
   console.log('    $ vuex g component MyComponent');
-  console.log('  **** new:');
-  console.log('    $ vuex server');
-  console.log('    $ vuex compile');
   console.log('');
 });
 
