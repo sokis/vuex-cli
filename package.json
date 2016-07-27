@@ -14,7 +14,8 @@
     "lint": "./node_modules/.bin/eslint ./src ./test ./blueprints",
     "clean": "rimraf lib",
     "publish:patch": "npm test && npm run clean && npm run build && npm version patch && npm publish",
-    "publish:minor": "npm test && npm run clean && npm run build && npm version minor && npm publish"
+    "publish:minor": "npm test && npm run clean && npm run build && npm version minor && npm publish",
+    "release": "bash build/release.sh"
   },
   "bin": {
     "vuex": "bin/vuex.js",
@@ -54,6 +55,7 @@
     "fs-extra": "^0.26.5",
     "humps": "^1.0.0",
     "jsonfile": "^2.2.3",
+    "koa": "^1.2.1",
     "lodash": "^4.5.1",
     "log-update": "^1.0.2",
     "minimist": "^1.2.0",
@@ -61,6 +63,7 @@
     "shelljs": "^0.6.0",
     "temp": "^0.8.3",
     "through": "^2.3.8",
+    "vuex-cli-webpack": "^0.1.5",
     "walk-sync": "^0.2.6"
   },
   "devDependencies": {
