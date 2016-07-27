@@ -22,7 +22,9 @@
     "vuex-init": "bin/vuex-init.js",
     "vuex-generate": "bin/vuex-generate.js",
     "vuex-g": "bin/vuex-g.js",
-    "vuex-new": "bin/vuex-new.js"
+    "vuex-new": "bin/vuex-new.js",
+    "vuex-server": "bin/vuex-server.js",
+    "vuex-compile": "bin/vuex-compile.js"
   },
   "repository": {
     "type": "git",

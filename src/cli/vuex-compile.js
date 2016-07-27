@@ -1,9 +1,8 @@
 import commander from 'commander';
 import { version } from '../version';
-import Serve from '../sub-commands/serve';
-// import minimist from 'minimist';
+import Compile from '../sub-commands/compile';
 
-const subCommand = new Serve();
+const subCommand = new Compile();
 
 commander.on('--help', () => {
 	subCommand.printUserHelp();
@@ -11,7 +10,7 @@ commander.on('--help', () => {
 
 commander
 	.version(version())
-	.description('  启动开发服务器')
+	.description('  编译代码')
 	.parse(process.argv);
 
 
