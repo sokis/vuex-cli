@@ -1,6 +1,6 @@
 {
   "name": "vuex-cli",
-  "version": "2.0.0-beta.5",
+  "version": "2.0.0-beta.6",
   "description": "快速搭建 vuex/vuejs 应用脚手架。",
   "main": "bin/vuex.js",
   "engine": {
