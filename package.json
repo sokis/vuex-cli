@@ -65,7 +65,7 @@
     "shelljs": "^0.6.0",
     "temp": "^0.8.3",
     "through": "^2.3.8",
-    "vuex-cli-webpack": "^1.0.4",
+    "vuex-cli-webpack": "^1.0.10",
     "walk-sync": "^0.2.6"
   },
   "devDependencies": {
