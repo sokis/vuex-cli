@@ -10,6 +10,9 @@
 
 ## 更新日志
 
+
++ 2016.08.01 同步更新`vuex-cli-webpack@1.0.10`
+
 + 2016.07.27 集成webpack 配置服务
 	- 启动webpack开发服务 `vuex serve`
 	- 编译代码 `vuex compile`
