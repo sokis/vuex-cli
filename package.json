@@ -15,7 +15,9 @@
     "clean": "rimraf lib",
     "publish:patch": "npm test && npm run clean && npm run build && npm version patch && npm publish",
     "publish:minor": "npm test && npm run clean && npm run build && npm version minor && npm publish",
-    "release": "bash build/release.sh"
+    "release": "bash build/release.sh",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "bin": {
     "vuex": "bin/vuex.js",
@@ -66,7 +68,8 @@
     "temp": "^0.8.3",
     "through": "^2.3.8",
     "vuex-cli-webpack": "^1.0.12",
-    "walk-sync": "^0.2.6"
+    "walk-sync": "^0.2.6",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.1",
@@ -82,5 +85,6 @@
     "mocha": "^2.4.5",
     "rimraf": "^2.5.2",
     "sinon": "^1.17.3"
-  }
+  },
+  "snyk": true
 }
