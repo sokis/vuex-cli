@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/sokis/vuex-cli#readme",
   "dependencies": {
-    "chalk": "^1.1.1",
+    "chalk": "^2.0.0",
     "commander": "^2.9.0",
     "denodeify": "^1.2.1",
     "ejs": "^2.4.1",
